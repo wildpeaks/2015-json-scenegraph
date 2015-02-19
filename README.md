@@ -68,20 +68,7 @@ Re-using a node (DEF/USE):
 		"children": [
 			{
 				"_use": "MyShape"
-			},
-			{
-				"_def": "MyShape",
-				"_type": "Shape",
-				"appearance": {
-					"material": {
-						"transparency": 0.5
-					}
-				},
-				"geometry": {
-					"_type": "Sphere",
-					"radius": 5
-				}
-			},
+			}
 		]
 	}
 ]
