@@ -2,10 +2,10 @@
 
 The goals are:
 
- - easily usable in Javascript thanks to `JSON.parse()`
+ - directly usable in *Javascript* using `JSON.parse()`
  - same node types and properties as **VRML / X3D**
- - don't use strings for boolean or numbers
- - write nodes the same way regardless of what contains it
+ - don't use *strings* for boolean or numbers
+ - write nodes *always the same way*, regardless of the container
  - avoid *deep nesting*
  - avoid *duplicated* data
 
