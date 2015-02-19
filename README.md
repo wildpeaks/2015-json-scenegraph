@@ -92,31 +92,31 @@ Re-using a node (DEF/USE):
 ## Design choices / FAQ
 
 
-## `"_type": "Shape"` vs `"Shape: [`
+### `"_type": "Shape"` vs `"Shape: [`
 
 **Short version**: Each object is represented by the same set of fields regardless of it's position in the tree, and MFNode that contain multiple types of node don't lose the order of the nodes.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/1)
 
 
-## Properties defined multiple times
+### Properties defined multiple times
 
 **Short version**: Most JSON parsers discard or refused duplicated properties.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/2)
 
 
-## Repeating `_type` vs repeating `Shape`
+### Repeating `_type` vs repeating `Shape`
 
 **Short version**: Using `_type` result in less deeply nested structures.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/3)
 
 
-## `"_children": "Shape"`+ no `_type` vs Array of `{"_type":"Shape"}`
+### `"_children": "Shape"`+ no `_type` vs Array of `{"_type":"Shape"}`
 
 **Short version**: the Array allows MFNode of multiple types of nodes, not just one type. Also it's more explicit when a type has multiple MFNode properties.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/4)
 
 
-## "_type" versus "type"
+### "_type" versus "type"
 
 **Short version**: some VRML nodes already have a property `type`, plus underscore is a common naming convention in Javascript for special/private fields.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/5)
