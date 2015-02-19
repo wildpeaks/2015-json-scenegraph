@@ -16,73 +16,76 @@ The goals are:
 
 Two shapes:
 
-	[
-		{
-			"_type": "Shape",
-			"appearance": {
-				"material": {
-					"diffuseColor": [0.8, 0.8, 1]
-				}
-			},
-			"geometry": {
-				"_type": "Box",
-				"size": [2, 2, 2]
+```javascript
+[
+	{
+		"_type": "Shape",
+		"appearance": {
+			"material": {
+				"diffuseColor": [0.8, 0.8, 1]
 			}
 		},
-		{
-			"_type": "Shape",
-			"appearance": {
-				"material": {
-					"transparency": 0.5
-				}
-			},
-			"geometry": {
-				"_type": "Sphere",
-				"radius": 5
-			}
+		"geometry": {
+			"_type": "Box",
+			"size": [2, 2, 2]
 		}
-	]
+	},
+	{
+		"_type": "Shape",
+		"appearance": {
+			"material": {
+				"transparency": 0.5
+			}
+		},
+		"geometry": {
+			"_type": "Sphere",
+			"radius": 5
+		}
+	}
+]
+```
 
 Re-using a node (DEF/USE):
 
-	[
-		{
-			"_def": "MyShape",
-			"_type": "Shape",
-			"appearance": {
-				"material": {
-					"diffuseColor": [0.8, 0.8, 1]
-				}
-			},
-			"geometry": {
-				"_type": "Box",
-				"size": [2, 2, 2]
+```javascript
+[
+	{
+		"_def": "MyShape",
+		"_type": "Shape",
+		"appearance": {
+			"material": {
+				"diffuseColor": [0.8, 0.8, 1]
 			}
 		},
-		{
-			"_type": "Transform",
-			"translation": [1, 0, 0],
-			"children": [
-				{
-					"_use": "MyShape"
-				},
-				{
-					"_def": "MyShape",
-					"_type": "Shape",
-					"appearance": {
-						"material": {
-							"transparency": 0.5
-						}
-					},
-					"geometry": {
-						"_type": "Sphere",
-						"radius": 5
+		"geometry": {
+			"_type": "Box",
+			"size": [2, 2, 2]
+		}
+	},
+	{
+		"_type": "Transform",
+		"translation": [1, 0, 0],
+		"children": [
+			{
+				"_use": "MyShape"
+			},
+			{
+				"_def": "MyShape",
+				"_type": "Shape",
+				"appearance": {
+					"material": {
+						"transparency": 0.5
 					}
 				},
-			]
-		}
-	]
-
+				"geometry": {
+					"_type": "Sphere",
+					"radius": 5
+				}
+			},
+		]
+	}
+]
+```
 
 -------------------------------------------------------------------------------
 
