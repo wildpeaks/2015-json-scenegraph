@@ -92,31 +92,31 @@ Re-using a node (DEF/USE):
 ## Design choices / FAQ
 
 
-### `"_type": "Shape"` vs `"Shape: [`
+### 1. `"_type": "Shape"` vs `"Shape: [`
 
 **Short version**: Each object is represented by the same set of fields regardless of it's position in the tree, and MFNode that contain multiple types of node don't lose the order of the nodes.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/1)
 
 
-### Properties defined multiple times
+### 2. Properties defined multiple times
 
 **Short version**: Most JSON parsers discard or refused duplicated properties.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/2)
 
 
-### Repeating `_type` vs repeating `Shape`
+### 3. Repeating `_type` vs repeating `Shape`
 
 **Short version**: Using `_type` result in less deeply nested structures.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/3)
 
 
-### `"_children": "Shape"`+ no `_type` vs Array of `{"_type":"Shape"}`
+### 4. `"_children": "Shape"`+ no `_type` vs Array of `{"_type":"Shape"}`
 
 **Short version**: the Array allows MFNode of multiple types of nodes, not just one type. Also it's more explicit when a type has multiple MFNode properties.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/4)
 
 
-### "_type" versus "type"
+### 5. "_type" versus "type"
 
 **Short version**: some VRML nodes already have a property `type`, plus underscore is a common naming convention in Javascript for special/private fields.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/5)
@@ -124,11 +124,20 @@ Re-using a node (DEF/USE):
 
 -------------------------------------------------------------------------------
 
-## Protos
+## Custom nodes (protos)
 
-You could use non-standard `_type` to have custom nodes.
+You could use non-standard `_type` value to define custom nodes.
 
-However I'd advise against putting the JS code inside the scenegraph because [it would run with eval(), which is not recommended](http://jslinterrors.com/eval-is-evil).
+```javascript
+
+{
+	"_type": "Teapot",
+	"bottom": false,
+	"size": 5
+}
+```
+
+The implementation would depend on the 3D engine, however I'd advise against putting the JS code inside the scenegraph because [it would run with eval(), which is not recommended](http://jslinterrors.com/eval-is-evil).
 
 Instead, the 3D engine should have a way to register custom types that generates the matching scenegraph for the custom type (e.g. [X3DOM components](http://x3dom.readthedocs.org/en/1.4.0/components.html?highlight=components)).
 
