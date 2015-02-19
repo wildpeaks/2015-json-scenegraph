@@ -116,7 +116,7 @@ Re-using a node (DEF/USE):
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/4)
 
 
-### 5. "_type" versus "type"
+### 5. `_type` vs `type`
 
 **Short version**: some VRML nodes already have a property `type`, plus underscore is a common naming convention in Javascript for special/private fields.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/5)
