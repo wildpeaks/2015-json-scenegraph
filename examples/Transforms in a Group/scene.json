@@ -10,6 +10,7 @@
 						"_type": "Shape",
 						"appearance": {
 							"material": {
+								"_type": "Material",
 								"diffuseColor": [0, 1, 0.5]
 							}
 						},
@@ -27,6 +28,7 @@
 						"_type": "Shape",
 						"appearance": {
 							"material": {
+								"_type": "Material",
 								"diffuseColor": [0, 0.5, 1]
 							}
 						},

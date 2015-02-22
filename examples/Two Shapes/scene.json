@@ -2,7 +2,9 @@
 	{
 		"_type": "Shape",
 		"appearance": {
+			"_type": "Appearance",
 			"material": {
+				"_type": "Material",
 				"diffuseColor": [0.8, 0.8, 1]
 			}
 		},
@@ -14,7 +16,9 @@
 	{
 		"_type": "Shape",
 		"appearance": {
+			"_type": "Appearance",
 			"material": {
+				"_type": "Material",
 				"transparency": 0.5
 			}
 		},

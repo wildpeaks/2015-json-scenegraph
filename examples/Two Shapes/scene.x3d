@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="3.0">
+	<Scene>
+		<Shape>
+			<Appearance>
+				<Material diffuseColor='0.8 0.8 1'/>
+			</Appearance>
+			<Box size='2 2 2'/>
+		</Shape>
+		<Shape>
+			<Appearance>
+				<Material transparency='0.5'/>
+			</Appearance>
+			<Sphere radius='5'/>
+		</Shape>
+	</Scene>
+</X3D>

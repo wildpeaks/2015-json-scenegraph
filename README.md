@@ -21,7 +21,9 @@ Two shapes:
 	{
 		"_type": "Shape",
 		"appearance": {
+			"_type": "Appearance",
 			"material": {
+				"_type": "Material",
 				"diffuseColor": [0.8, 0.8, 1]
 			}
 		},
@@ -33,7 +35,9 @@ Two shapes:
 	{
 		"_type": "Shape",
 		"appearance": {
+			"_type": "Appearance",
 			"material": {
+				"_type": "Material",
 				"transparency": 0.5
 			}
 		},
@@ -50,10 +54,12 @@ Re-using a node (DEF/USE):
 ```javascript
 [
 	{
-		"_def": "MyShape",
+		"_def": "myshape",
 		"_type": "Shape",
 		"appearance": {
+			"_type": "Appearance",
 			"material": {
+				"_type": "Material",
 				"diffuseColor": [0.8, 0.8, 1]
 			}
 		},
@@ -67,7 +73,7 @@ Re-using a node (DEF/USE):
 		"translation": [1, 0, 0],
 		"children": [
 			{
-				"_use": "MyShape"
+				"_use": "myshape"
 			}
 		]
 	}
@@ -89,6 +95,7 @@ Transforms in a Group:
 						"_type": "Shape",
 						"appearance": {
 							"material": {
+								"_type": "Material",
 								"diffuseColor": [0, 1, 0.5]
 							}
 						},
@@ -106,6 +113,7 @@ Transforms in a Group:
 						"_type": "Shape",
 						"appearance": {
 							"material": {
+								"_type": "Material",
 								"diffuseColor": [0, 0.5, 1]
 							}
 						},

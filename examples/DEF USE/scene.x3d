@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="3.0">
+	<Scene>
+		<Shape DEF="myshape">
+			<Appearance>
+				<Material diffuseColor='0.8 0.8 1'/>
+			</Appearance>
+			<Box size='2 2 2'/>
+		</Shape>
+		<Transform translation='1 0 0'>
+			<Shape USE="myshape"/>
+		</Transform>
+	</Scene>
+</X3D>

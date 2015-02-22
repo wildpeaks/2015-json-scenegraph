@@ -1,9 +1,11 @@
 [
 	{
-		"_def": "MyShape",
+		"_def": "myshape",
 		"_type": "Shape",
 		"appearance": {
+			"_type": "Appearance",
 			"material": {
+				"_type": "Material",
 				"diffuseColor": [0.8, 0.8, 1]
 			}
 		},
@@ -17,7 +19,7 @@
 		"translation": [1, 0, 0],
 		"children": [
 			{
-				"_use": "MyShape"
+				"_use": "myshape"
 			}
 		]
 	}

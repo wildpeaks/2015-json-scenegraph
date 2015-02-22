@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="3.0">
+	<Scene>
+		<Group>
+			<Transform translation='-2 0 0'>
+				<Shape>
+					<Appearance>
+						<Material diffuseColor='0 1 0.5'/>
+					</Appearance>
+					<Box/>
+				</Shape>
+			</Transform>
+			<Transform translation='2 0 0'>
+				<Shape>
+					<Appearance>
+						<Material diffuseColor='0 0.5 1'/>
+					</Appearance>
+					<Box/>
+				</Shape>
+			</Transform>
+		</Group>
+	</Scene>
+</X3D>
