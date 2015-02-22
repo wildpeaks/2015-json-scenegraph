@@ -74,6 +74,52 @@ Re-using a node (DEF/USE):
 ]
 ```
 
+Transforms in a Group:
+
+```javascript
+[
+	{
+		"_type": "Group",
+		"children": [
+			{
+				"_type": "Transform",
+				"translation": [-2, 0, 0],
+				"children": [
+					{
+						"_type": "Shape",
+						"appearance": {
+							"material": {
+								"diffuseColor": [0, 1, 0.5]
+							}
+						},
+						"geometry": {
+							"_type": "Box"
+						}
+					},
+				]
+			},
+			{
+				"_type": "Transform",
+				"translation": [2, 0, 0],
+				"children": [
+					{
+						"_type": "Shape",
+						"appearance": {
+							"material": {
+								"diffuseColor": [0, 0.5, 1]
+							}
+						},
+						"geometry": {
+							"_type": "Sphere"
+						}
+					},
+				]
+			}
+		]
+	}
+]
+```
+
 -------------------------------------------------------------------------------
 
 ## Design choices / FAQ
