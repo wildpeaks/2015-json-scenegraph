@@ -3,7 +3,7 @@
 Group {
 	children [
 		Transform {
-			translation	-2 0 0
+			translation -2 0 0
 			children [
 				Shape {
 					appearance Appearance {
@@ -16,7 +16,7 @@ Group {
 			]
 		}
 		Transform {
-			translation	2 0 0
+			translation 2 0 0
 			children [
 				Shape {
 					appearance Appearance {
