@@ -151,7 +151,7 @@ Transforms in a Group:
 
 ### 5. `_type` vs `type`
 
-**Short version**: some VRML nodes already have a property `type`, plus underscore is a common naming convention in Javascript for special/private fields.
+**Short version**: `_type` because some VRML nodes already have a property `type`, plus underscore is a common naming convention in Javascript for special/private fields.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/5)
 
 
@@ -159,6 +159,12 @@ Transforms in a Group:
 
 **Short version**: `[1,2,3,4,5,6]` fits better because it's [like VRML & X3D](http://www.web3d.org/documents/specifications/19775-1/V3.2/Part01/fieldsDef.html#SFVec2fAndMFVec2f), less deeply nested, and easier for WebGL [Typed Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays).
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/6)
+
+
+### 7. Explicit vs implicit properties
+
+**Short version**: **explicit** because it avoids guessing, doesn't break the "always write a node the same way" rule and is more human-readable.
+[Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/7)
 
 
 -------------------------------------------------------------------------------
