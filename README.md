@@ -135,44 +135,51 @@ Transforms in a Group:
 
 ### 1. `"_type": "Shape"` vs `"Shape: [`
 
-**Short version**: Each object is represented by the same set of fields regardless of it's position in the tree, and MFNode that contain multiple types of node don't lose the order of the nodes.
-[Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/1)
+> `_type` because each object is represented by the same set of fields regardless of it's position in the tree, and MFNode that contain multiple types of node don't lose the order of the nodes.
+> 
+> [More details and comments](https://github.com/wildpeaks/json-scenegraph/issues/1)
 
 
 ### 2. Properties defined multiple times
 
-**Short version**: Most JSON parsers discard or refuse duplicated properties.
-[Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/2)
+> **Don't repeat properties**: most JSON parsers discard or refuse duplicated properties.
+> 
+> [More details and comments](https://github.com/wildpeaks/json-scenegraph/issues/2)
 
 
 ### 3. Repeating `_type` vs repeating `Shape`
 
-**Short version**: Using `_type` result in less deeply nested structures.
-[Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/3)
+> `_type` because it produces less deep structures.
+> 
+> [More details and comments](https://github.com/wildpeaks/json-scenegraph/issues/3)
 
 
 ### 4. `"_children": "Shape"`+ no `_type` vs Array of `{"_type":"Shape"}`
 
-**Short version**: the Array allows MFNode of multiple types of nodes, not just one type. Also it's more explicit when a type has multiple MFNode properties.
-[Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/4)
+> The **Array** because it allows MFNode of multiple types of nodes, not just one type. Also it's more explicit when a type has multiple MFNode properties.
+>
+> [More details and comments](https://github.com/wildpeaks/json-scenegraph/issues/4)
 
 
 ### 5. `_type` vs `type`
 
-**Short version**: `_type` because some VRML nodes already have a property `type`, plus underscore is a common naming convention in Javascript for special/private fields.
-[Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/5)
+> `_type` because some VRML nodes already have a property `type`, plus underscore is a common naming convention in Javascript for special/private fields.
+>
+> [More details and comments](https://github.com/wildpeaks/json-scenegraph/issues/5)
 
 
 ### 6. MFVec3f: `[1,2,3,4,5,6]` vs `[[1,2,3],[4,5,6]]`
 
-**Short version**: `[1,2,3,4,5,6]` fits better because it's [like VRML & X3D](http://www.web3d.org/documents/specifications/19775-1/V3.2/Part01/fieldsDef.html#SFVec2fAndMFVec2f), less deeply nested, and easier for WebGL [Typed Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays).
-[Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/6)
+> `[1,2,3,4,5,6]` because it's [like VRML & X3D](http://www.web3d.org/documents/specifications/19775-1/V3.2/Part01/fieldsDef.html#SFVec2fAndMFVec2f), less deeply nested, and easier for WebGL [Typed Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays).
+>
+> [More details and comments](https://github.com/wildpeaks/json-scenegraph/issues/6)
 
 
 ### 7. Explicit vs implicit properties
 
-**Short version**: `explicit` because it *avoids guessing*, doesn't break the *"always write a node the same way"* rule, has *shorter paths* to access nested values and uses the same paths as *VRMLscript*.
-[Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/7)
+> **Explicit** because it *avoids guessing*, doesn't break the *"always write a node the same way"* rule, has *shorter paths* to access nested values and uses the same paths as *VRMLscript*.
+>
+> [More details and comments](https://github.com/wildpeaks/json-scenegraph/issues/7)
 
 
 -------------------------------------------------------------------------------
