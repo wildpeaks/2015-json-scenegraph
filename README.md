@@ -171,7 +171,7 @@ Transforms in a Group:
 
 ### 7. Explicit vs implicit properties
 
-**Short version**: **explicit** because it *avoids guessing*, doesn't break the **"always write a node the same way"** rule, has *shorter paths* to access nested values and uses the same paths as *VRMLscript*.
+**Short version**: `explicit` because it *avoids guessing*, doesn't break the *"always write a node the same way"* rule, has *shorter paths* to access nested values and uses the same paths as *VRMLscript*.
 [Long version and comments](https://github.com/wildpeaks/json-scenegraph/issues/7)
 
 
