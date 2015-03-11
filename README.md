@@ -182,6 +182,13 @@ Transforms in a Group:
 > [More details and comments](https://github.com/wildpeaks/json-scenegraph/issues/7)
 
 
+### 8. Routes
+
+> Use `_type ROUTE` objects for expressing routes.
+>
+> [More details and comments](https://github.com/wildpeaks/json-scenegraph/issues/8)
+
+
 -------------------------------------------------------------------------------
 
 ## Custom nodes (protos)
