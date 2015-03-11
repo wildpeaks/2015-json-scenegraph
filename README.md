@@ -189,6 +189,13 @@ Transforms in a Group:
 > [More details and comments](https://github.com/wildpeaks/json-scenegraph/issues/8)
 
 
+### 9. CDATA
+
+> Like VRML, use simple String values for SFString values that the XML encoding expresses as CDATA.
+>
+> [More details and comments](https://github.com/wildpeaks/json-scenegraph/issues/9)
+
+
 -------------------------------------------------------------------------------
 
 ## Custom nodes (protos)
