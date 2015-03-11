@@ -1,0 +1,52 @@
+[
+	{
+		"_type": "TimeSensor",
+		"_def": "timer",
+		"loop": true,
+		"cycleInterval": 4
+	},
+	{
+		"_def": "interpolator",
+		"_type": "PositionInterpolator",
+		"key": [0, 0.5, 1],
+		"keyValue": [
+			1, 0, 0,
+			2, 1, 0,
+			3, 0, 0
+		]
+	},
+	{
+		"_def": "transform",
+		"_type": "Transform",
+		"children": [
+			{
+				"_type": "Shape",
+				"appearance": {
+					"_type": "Appearance",
+					"material": {
+						"_type": "Material",
+						"diffuseColor": [0, 1, 0]
+					}
+				},
+				"geometry": {
+					"_type": "Sphere",
+					"radius": 0.5
+				}
+			}
+		]
+	},
+	{
+		"_type": "ROUTE",
+		"fromNode": "timer",
+		"fromField": "fraction_changed",
+		"toNode": "interpolator",
+		"toField": "set_fraction"
+	},
+	{
+		"_type": "ROUTE",
+		"fromNode": "interpolator",
+		"fromField": "value_changed",
+		"toNode": "transform",
+		"toField": "set_translation"
+	}
+]

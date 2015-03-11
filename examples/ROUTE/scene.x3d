@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="3.0">
+	<Scene>
+		<TimeSensor DEF="timer" cycleInterval='4' loop='true' />
+		<PositionInterpolator DEF="interpolator" key='0,0.5,1' keyValue='1 0 0,2 1 0,3 0 0' />
+		<Transform DEF="transform" translation='-0.3140939 0.6859061 0'>
+			<Shape>
+				<Appearance>
+					<Material diffuseColor='0 1 0' />
+				</Appearance>
+				<Sphere radius='0.5' />
+			</Shape>
+		</Transform>
+		<ROUTE fromNode="timer" fromField="fraction_changed" toNode="interpolator" toField="set_fraction" />
+		<ROUTE fromNode="interpolator" fromField="value_changed" toNode="transform" toField="set_translation" />
+	</Scene>
+</X3D>

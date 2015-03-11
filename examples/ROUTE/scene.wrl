@@ -1,0 +1,35 @@
+#VRML V2.0 utf8
+
+DEF	timer TimeSensor {
+	loop TRUE
+	cycleInterval 4
+}
+
+DEF	interpolator PositionInterpolator {
+	key	[
+		0, 0.5, 1
+	]
+	keyValue [
+		1, 0, 0,
+		2, 1, 0,
+		3, 0, 0
+	]
+}
+
+DEF	transform Transform {
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0 1 0
+				}
+			}
+			geometry Sphere	{
+				radius 0.5
+			}
+		}
+	]
+}
+
+ROUTE timer.fraction_changed TO	interpolator.set_fraction
+ROUTE interpolator.value_changed TO transform.translation
