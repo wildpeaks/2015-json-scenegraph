@@ -1,0 +1,7 @@
+<X3D profile="Immersive" version="3.0">
+	<Scene>
+		<Script>
+			<![CDATA[ javascript: function initialize(){trace('Hello World');}]]>
+		</Script>
+	</Scene>
+</X3D>
