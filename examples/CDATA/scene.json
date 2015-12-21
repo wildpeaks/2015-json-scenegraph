@@ -1,6 +1,6 @@
 [
 	{
-		"_type": "Script",
+		"$": "Script",
 		"url": [
 			"javascript: function initialize(){trace('Hello World');}"
 		]

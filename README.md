@@ -54,7 +54,7 @@ Re-using a node (DEF/USE):
 ```javascript
 [
 	{
-		"$def": "myshape",
+		"$DEF": "myshape",
 		"$": "Shape",
 		"appearance": {
 			"$": "Appearance",
@@ -73,7 +73,7 @@ Re-using a node (DEF/USE):
 		"translation": [1, 0, 0],
 		"children": [
 			{
-				"$use": "myshape"
+				"$USE": "myshape"
 			}
 		]
 	}

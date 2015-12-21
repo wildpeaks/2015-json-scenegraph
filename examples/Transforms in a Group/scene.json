@@ -1,43 +1,43 @@
-[
-	{
-		"_type": "Group",
-		"children": [
-			{
-				"_type": "Transform",
-				"translation": [-2, 0, 0],
-				"children": [
-					{
-						"_type": "Shape",
-						"appearance": {
-							"material": {
-								"_type": "Material",
-								"diffuseColor": [0, 1, 0.5]
-							}
-						},
-						"geometry": {
-							"_type": "Box"
+{
+	"$": "Group",
+	"children": [
+		{
+			"$": "Transform",
+			"translation": [-2, 0, 0],
+			"children": [
+				{
+					"$": "Shape",
+					"appearance": {
+						"$": "Appearance",
+						"material": {
+							"$": "Material",
+							"diffuseColor": [0, 1, 0.5]
 						}
 					},
-				]
-			},
-			{
-				"_type": "Transform",
-				"translation": [2, 0, 0],
-				"children": [
-					{
-						"_type": "Shape",
-						"appearance": {
-							"material": {
-								"_type": "Material",
-								"diffuseColor": [0, 0.5, 1]
-							}
-						},
-						"geometry": {
-							"_type": "Sphere"
+					"geometry": {
+						"$": "Box"
+					}
+				},
+			]
+		},
+		{
+			"$": "Transform",
+			"translation": [2, 0, 0],
+			"children": [
+				{
+					"$": "Shape",
+					"appearance": {
+						"$": "Appearance",
+						"material": {
+							"$": "Material",
+							"diffuseColor": [0, 0.5, 1]
 						}
 					},
-				]
-			}
-		]
-	}
-]
+					"geometry": {
+						"$": "Sphere"
+					}
+				},
+			]
+		}
+	]
+}

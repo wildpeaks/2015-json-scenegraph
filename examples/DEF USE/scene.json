@@ -1,25 +1,25 @@
 [
 	{
-		"_def": "myshape",
-		"_type": "Shape",
+		"$DEF": "myshape",
+		"$": "Shape",
 		"appearance": {
-			"_type": "Appearance",
+			"$": "Appearance",
 			"material": {
-				"_type": "Material",
+				"$": "Material",
 				"diffuseColor": [0.8, 0.8, 1]
 			}
 		},
 		"geometry": {
-			"_type": "Box",
+			"$": "Box",
 			"size": [2, 2, 2]
 		}
 	},
 	{
-		"_type": "Transform",
+		"$": "Transform",
 		"translation": [1, 0, 0],
 		"children": [
 			{
-				"_use": "myshape"
+				"$USE": "myshape"
 			}
 		]
 	}

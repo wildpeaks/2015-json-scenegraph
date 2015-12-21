@@ -1,29 +1,29 @@
 [
 	{
-		"_type": "Shape",
+		"$": "Shape",
 		"appearance": {
-			"_type": "Appearance",
+			"$": "Appearance",
 			"material": {
-				"_type": "Material",
+				"$": "Material",
 				"diffuseColor": [0.8, 0.8, 1]
 			}
 		},
 		"geometry": {
-			"_type": "Box",
+			"$": "Box",
 			"size": [2, 2, 2]
 		}
 	},
 	{
-		"_type": "Shape",
+		"$": "Shape",
 		"appearance": {
-			"_type": "Appearance",
+			"$": "Appearance",
 			"material": {
-				"_type": "Material",
+				"$": "Material",
 				"transparency": 0.5
 			}
 		},
 		"geometry": {
-			"_type": "Sphere",
+			"$": "Sphere",
 			"radius": 5
 		}
 	}

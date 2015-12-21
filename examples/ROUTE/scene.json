@@ -1,13 +1,13 @@
 [
 	{
-		"_type": "TimeSensor",
-		"_def": "timer",
+		"$DEF": "mytimer",
+		"$": "TimeSensor",
 		"loop": true,
 		"cycleInterval": 4
 	},
 	{
-		"_def": "interpolator",
-		"_type": "PositionInterpolator",
+		"$DEF": "mypositions",
+		"$": "PositionInterpolator",
 		"key": [0, 0.5, 1],
 		"keyValue": [
 			1, 0, 0,
@@ -16,37 +16,37 @@
 		]
 	},
 	{
-		"_def": "transform",
-		"_type": "Transform",
+		"$DEF": "mycontainer",
+		"$": "Transform",
 		"children": [
 			{
-				"_type": "Shape",
+				"$": "Shape",
 				"appearance": {
-					"_type": "Appearance",
+					"$": "Appearance",
 					"material": {
-						"_type": "Material",
+						"$": "Material",
 						"diffuseColor": [0, 1, 0]
 					}
 				},
 				"geometry": {
-					"_type": "Sphere",
+					"$": "Sphere",
 					"radius": 0.5
 				}
 			}
 		]
 	},
 	{
-		"_type": "ROUTE",
-		"fromNode": "timer",
+		"$": "ROUTE",
+		"fromNode": "mytimer",
 		"fromField": "fraction_changed",
-		"toNode": "interpolator",
+		"toNode": "mypositions",
 		"toField": "set_fraction"
 	},
 	{
-		"_type": "ROUTE",
-		"fromNode": "interpolator",
+		"$": "ROUTE",
+		"fromNode": "mypositions",
 		"fromField": "value_changed",
-		"toNode": "transform",
+		"toNode": "mycontainer",
 		"toField": "set_translation"
 	}
 ]
