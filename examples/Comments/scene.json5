@@ -1,0 +1,16 @@
+{
+    "$": "Shape",
+
+    // This line is a comment.
+    "geometry": {
+        "$": "Sphere"
+    },
+
+    "appearance": {
+        "$": "Appearance",
+        "material": {
+            "$": "Material",
+            "diffuseColor": [0, 1, 0]
+        }
+    }
+}
